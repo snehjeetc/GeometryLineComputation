@@ -10,5 +10,15 @@ public class Line{
         dest = new Point(d);
         length = s.distanceTo(d);
     }
+
+    Line(Line l){
+        source = new Point(l.source);
+        dest = new Point(l.dest);
+        length = l.length;
+    }
+
+    public double getLength(){
+        return length;
+    }
 }
 
