@@ -11,11 +11,33 @@ public class GeometryLineMain{
         l1 = takeLineInput();
         System.out.println("Enter line 2 : ");
         l2 = takeLineInput();
-        if(l1.getLength() == l2.getLength())
-            System.out.println("Two line is of same length");
-        else
-            System.out.println("Two line is of different length");
-
+        if(l1.equalTo(l2))
+            System.out.println("Two line is same");
+        else{
+            int comp = l1.compareTo(l2);
+            if(comp == 0)
+                System.out.println("Two line is of same length");
+            else if(comp < 0){
+                System.out.print("[ ");
+                l1.print();
+                System.out.print(" ]");
+                System.out.print(" < ");
+                System.out.print("[ ");
+                l2.print();
+                System.out.print(" ]");
+                System.out.println();
+            }
+            else{
+                System.out.print("[ ");
+                l1.print();
+                System.out.print(" ]");
+                System.out.print(" > ");
+                System.out.print("[ ");
+                l2.print();
+                System.out.print(" ]");
+                System.out.println();
+            }
+        }
     }
     static Point takePointInput(){
         Scanner sc = new Scanner(System.in);
