@@ -6,11 +6,10 @@ public class GeometryLineMain{
     public static void main(String[] args){
         
         System.out.println("Welcome to Line Comparison Computaion Program");
-        Line l1, l2;
         System.out.println("Enter line 1 : ");
-        l1 = takeLineInput();
+        Line l1 = takeLineInput();
         System.out.println("Enter line 2 : ");
-        l2 = takeLineInput();
+        Line l2 = takeLineInput();
         if(l1.equalTo(l2))
             System.out.println("Two line is same");
         else{
@@ -55,5 +54,4 @@ public class GeometryLineMain{
         return line;
     }
 }
-
 
